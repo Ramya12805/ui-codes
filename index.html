@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Character Count</title>
+</head>
+<body>
+  <h1>Character Count</h1>
+  <textarea id="comments" rows="4" cols="50" maxlength="50"></textarea>
+  <p id="characterCount">Character count: 0</p>
+
+  <script>
+    var inputText = document.getElementById("comments");
+    var characterCount = document.getElementById("characterCount");
+
+    inputText.addEventListener("input", function() {
+      var text = inputText.value;
+      characterCount.textContent = "Character count: " + text.length;
+    });
+  </script>
+</body>
+</html>
