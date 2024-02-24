@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, button {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#error-msg {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Validation</h1>
+        <form id="emailForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="reEmail">Re-enter Email:</label>
+            <input type="email" id="reEmail" name="reEmail" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="error-msg"></div>
+    </div>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const reEmail = document.getElementById('reEmail').value;
+    const errorMsg = document.getElementById('error-msg');
+
+    if (email !== reEmail) {
+        errorMsg.textContent = "Emails do not match!";
+    } else if (!isValidEmail(email)) {
+        errorMsg.textContent = "Invalid email format!";
+    } else {
+        // Valid email, do further processing here
+        errorMsg.textContent = "";
+        alert("Form submitted successfully!");
+        // You can submit the form to the server here if needed.
+    }
+});
+
+function isValidEmail(email) {
+    // Regular expression to validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+    </script>
+</body>
+</html>

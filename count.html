@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Count</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#char-count {
+    text-align: right;
+    color: #777;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Character Count</h1>
+        <textarea id="message" placeholder="Type your message here..." maxlength="160"></textarea>
+        <div id="char-count">160 characters remaining</div>
+    </div>
+
+    <script>
+        const messageTextarea = document.getElementById('message');
+const charCountElement = document.getElementById('char-count');
+
+messageTextarea.addEventListener('input', updateCharCount);
+
+function updateCharCount() {
+    const message = messageTextarea.value;
+    const maxLength = parseInt(messageTextarea.getAttribute('maxlength'));
+    const remainingChars = maxLength - message.length;
+
+    charCountElement.textContent = `${remainingChars} characters remaining`;
+}
+
+    </script>
+</body>
+</html>
