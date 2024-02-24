@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            border: 3px solid black;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter the following details</h2>
+    <form action="">
+        <label for="text">Enter your Name</label>
+        <input type="text">
+        <br><br>
+        <input type="text" name="" placeholder="Enter your Father's Name" id="">
+        <br><br>
+        <textarea type="message" rows="7" cols="30"  placeholder="Enter Permanent Address"></textarea>
+       <br><br>
+        <label for="radio">Whats your age</label>
+        <input type="radio" id="age1" name="age" value="30">
+         <label for="age1">0 to 10</label>
+        <input type="radio" id="age2" name="age" value="60">
+        <label for="age2">11 to 20</label>
+       <input type="radio" id="age3" name="age" value="100">
+       <label for="age3">21 to 30</label>
+       <input type="radio" id="age3" name="age" value="100">
+       <label for="age3">31 to 40</label>
+       <input type="radio" id="age3" name="age" value="100">
+       <label for="age3">41 to 50</label>
+       <input type="radio" id="age3" name="age" value="100">
+       <label for="age3">51 to 60</label>
+       <input type="radio" id="age3" name="age" value="100">
+       <label for="age3">Above 60</label>
+<br><br>
+       <label for="email">Your email Please</label>
+       <input type="email" placeholder="abc@gde.com">
+<br><br>
+       <label for="telephone">Your Telephone number</label>
+       <input type="tel">
+<br><br>
+       <label for="password">Enter your Password</label>
+       <input type="password">
+<br><br>
+       <label for="checkbox">Check the top four items of priority</label>
+       <input type="checkbox" id="1">
+       <label for="1">Laptop</label>
+       <input type="checkbox" id="2">
+       <label for="2">Desktop</label>
+       <input type="checkbox" id="3">
+       <label for="3">Mouse</label>
+       <input type="checkbox" id="4">
+       <label for="4">Keyboard</label>
+       <input type="checkbox" id="5">
+       <label for="5">Pendrive</label>
+       <input type="checkbox" id="6">
+       <label for="6">Harddisk</label>
+       <input type="checkbox" id="7">
+       <label for="7">Modem</label>
+       <input type="checkbox" id="8">
+       <label for="8">Cables</label>
+       <input type="checkbox" id="9">
+       <label for="9">Wires</label>
+       <input type="checkbox" id="10">
+       <label for="10">Mobile</label>
+
+<br><br>
+<label for="category">Choos a category which you like most:</label>
+       <select name="catergory" id="">
+        <option value="">Groceries</option>
+        <option value="">Footwares</option>
+        <option value="">Electronics</option>
+        <option value="">Hardwares</option>
+        <option value="">Accessories</option>
+        <option value="">Television</option>
+       </select>
+<br><br>
+       <label for="">Attach a report on a Item which you like most as a file</label>
+       <input type="file">
+
+       <br><br>
+       <label for="range">Give your rating of Mobiles as a range of 1 to 10</label>
+       <input type="range" name="" id="">
+       <br><br>
+       <label for="date">when did you purchase last time?</label>
+       <input type="datetime-local" name="" id="">
+       <br><br>
+       <input type="submit" value=" Click to Submit">
+       <input type="reset" value="press to reset or clear">
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+          
+          if (!validateEmail(email)) {
+            event.preventDefault();
+            alert("Please enter a valid email address.");
+          }
+          
+        });
+        
+        function validateEmail(email) {
+          var re = /\S+@\S+\.\S+/;
+          return re.test(email);
+        }
+        
+        document.getElementById("myForm").addEventListener("reset", function(event) {
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("message").value = "";
+        });
+      </script>
+</body>
+</html>
