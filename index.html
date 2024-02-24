@@ -1,21 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Character Count</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Refund Form</title>
+    <style>
+        .heading{
+            text-align: center;
+            border: solid 3px green;
+            font-size: 35px;
+        }
+        .personal{
+            display:block;
+            color:black;
+            background-color:green;
+        }
+        table,th,td{
+            border:solid 1px orange;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding-top: 10px;
+            padding-left: 30px;
+            padding-bottom: 20px;
+            padding-right: 40px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Character Count</h1>
-  <textarea id="comments" rows="4" cols="50" maxlength="50"></textarea>
-  <p id="characterCount">Character count: 0</p>
+    <h1 class="heading">Tax Refund Form</h1>
+    <h3 class="personal">Personal Details</h3>
+    <table class="table">
+        <tr>
+            <td>Your first name and initial</td>
+            <td>Last name</td>
+            <td>Number 1</td>
+        </tr>
+        <tr>
+            <td>Nationality</td>
+            <td>Phone No</td>
+            <td>Number 2</td>
+        </tr>
+        <tr>
+            <td>Address(street and number),see instructions</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>City,Town,Street and ZIPCode,see instructions</td>
+        </tr>
+        
+    </table>
 
-  <script>
-    var inputText = document.getElementById("comments");
-    var characterCount = document.getElementById("characterCount");
-
-    inputText.addEventListener("input", function() {
-      var text = inputText.value;
-      characterCount.textContent = "Character count: " + text.length;
-    });
-  </script>
+    <p text-align="left">
+        Checking a box for conformation(see instructions on page 12):
+          <input type="checkbox" name="value1" value="You">
+          <label for="vehicle1">You</label>
+          <input type="checkbox" name="value2" value="Spouse">
+          <label for="vehicle2">Spouse</label><br></h3></p>
+        
+        <hr color="orange">
+    <p text-align="left">
+        Status:
+        <input type="checkbox" name="value3" value="Single">
+        <label for="single">Single</label>
+        <input type="checkbox" name="value4" value="Divorced">
+        <label for="divorced">Divorced</label><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="checkbox" name="value5" value="Married">
+        <label for="married">Married</label>
+        <input type="checkbox" name="value6" value="Others">
+        <label for="others">Others</label>
+        </p>
+        
 </body>
 </html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        span{
+            background-color: aqua;
+        }
+       .heading {
+            color:red;
+            text-align:center;
+        }
+        .Access{
+            color:red;
+            text-align: center;
+        }
+        ol {
+        counter-reset: item 
+        }
+       li{ 
+    display: block
+     }
+li:before { 
+    content: counters(item, ".") " "; counter-increment: item }
+    </style>
+</head>
+<body>
+    <h3>&nbsp;&nbsp;&nbsp;&nbsp;Dear Student,Please respond to all the questions.</h3>
+    <h3 class="heading"><span>A. Background Information</span></h3>
+    <ol>
+        <li>1 Name of the university:</li>
+        <li>2 Country:</li>
+        <li>3 Your email:</li>
+        <li>4 Gender 
+        <input type="radio" name="gender" value="female">
+       <label for="female">Female</label>
+       <input type="radio" name="gender" value="male">
+       <label for="male">Male</label>
+        </li>
+        <li>5 Your age group:
+        <input type="radio" name="age" value="below 20">
+       <label for="below 20">Below 20</label>
+       <input type="radio" name="age" value="21-25">
+       <label for="21-25">21-25</label>
+       <input type="radio" name="age" value="26-30">
+       <label for="26-30">26-30</label>
+       <input type="radio" name="age" value="31-35">
+       <label for="31-35">31-35</label>
+       <input type="radio" name="age" value="36 and above">
+       <label for="36 and above">36 and above</label>
+        </li>
+        <li>6 Your level of study:
+            <input type="checkbox" name="study" value="ug">
+            <label for="ug">Undergraduate</label>
+            <input type="checkbox" name="study" value="g">
+            <label for="g">Graduate or post graduate</label>
+            <input type="checkbox" name="study" value="r">
+            <label for="r">Research</label>
+        </li>
+        <li>7 Year of study:
+            <input type="radio" name="s" value="year1">
+            <label for="year1">Year 1</label>
+            <input type="radio" name="s" value="year2">
+            <label for="year2">Year 2</label>
+            <input type="radio" name="s" value="year3">
+            <label for="year3">Year 3</label>
+            <input type="radio" name="s" value="year4">
+            <label for="year4">Year 4</label>
+        </li>
+        <li>8 Your faculty discipline: <br>
+            <div calss="check">
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Humanities</label>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Natural sciences</label>
+            <br>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Social sciences</label>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Engineering and techonology</label>
+            <br>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Commerce and management</label>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Agricultre and natural resources</label>
+            <br>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Health and Medical sciences</label>
+            <input type="checkbox" name="fac" value="human">
+            <label for="human">Fine and Performing Arts</label>
+            </div>
+        </li>
+        <li>9 Most of the courses you currently studying are:
+            <input type="checkbox" name="cou" value="ff">
+            <label for="ff">Traditional face-to-face</label>
+            <br>
+            <input type="checkbox" name="com" value="online" >
+            <label for="online">Completely online</label>
+            <br>
+            <input type="checkbox" name="ble" value="blend">
+            <label for="blend">Blended,where some components of the study are done online</label>
+        </li>
+    </ol>
+    
+       <h3 class="Access"><span>Access to and Use of information and Communication Techonologies(ICTs)</span> </h3>
+        
+      <input type="submit" name="submit" value="submit">
+      <label for="submit"></label>
+       
+</body>
+</html>
